@@ -1,12 +1,10 @@
-import pandas as pd
+from TestData import TestData
 
 # pandas 에서는 데이터프레임(DataFrame)과 시리즈(Series) 라는 두 가지 새로운 자료형을 제공한다.
 # 데이터프레임은 엑셀에서 볼 수 있는 시트(Sheet)와 동일한 개념이다.
 # 시리즈는 엑셀에서 볼 수 있는 열(Column)과 동일한 개념이다.
 
-df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
-
-df = pd.read_csv('../data/gapminder.tsv', sep='\t')
+df = TestData.getData()
 
 
 def last_row_number(df):
