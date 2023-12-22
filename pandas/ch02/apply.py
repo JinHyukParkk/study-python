@@ -9,4 +9,6 @@ print(df)
 df = df.apply(lambda x: x ** 2, axis=1)
 print(df)
 
+df = df.applymap(lambda x: x ** 2)
+print(df)
 
