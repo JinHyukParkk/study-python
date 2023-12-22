@@ -10,7 +10,6 @@ print(init_df_case1)
 df = init_df_case1.apply(lambda x: x ** 2)
 print(df)
 
-
 df = init_df_case1.map(lambda x: x ** 2)
 print(df)
 
@@ -18,8 +17,8 @@ print(df)
 init_df_case2 = pd.DataFrame({'Num': [1, 2, 3], 'Eng': ['A', 'B', 'C']})
 print(init_df_case2)
 
-df = init_df_case2.apply(lambda x: x ** 2)
+df = init_df_case2.apply(lambda x: x.Num ** 2, axis=1)
 print(df)
 
-df = init_df_case2.map(lambda x: x ** 2)
+df = init_df_case2.map(lambda x: x.Num ** 2)
 print(df)
