@@ -4,13 +4,10 @@ nums.sort()
 
 print(nums)
 
-
-
 list(map(int, input().split()))
 
 a, b, c = input().split()
 
 result = list.replace()
-
 
 print(result)
