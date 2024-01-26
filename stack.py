@@ -14,3 +14,6 @@ print(len(stack) == 0)
 
 # size
 print(len(stack))
+
+# print
+print(stack)
