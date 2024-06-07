@@ -15,7 +15,7 @@ stock_codes = []
 
 # 무한 반복문, 특정 조건을 입력하면 멈춘다.
 while True:
-    keyword = input("종목을 입력하세요. quit을 입력하면 종목 선택이 끝납니다.")
+    keyword = input("종목 코드를 입력하세요. quit을 입력하면 종목 선택이 끝납니다.")
 
     if keyword == 'quit':
       break
