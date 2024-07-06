@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import talib
 
 # 특정 주식의 데이터를 가져옵니다 (예: 삼성전자)
-ticker = "005930"  # 삼성전자의 종목 코드
+ticker = "281740"
 start_date = "2023-01-01"
-end_date = "2024-05-31"
+end_date = "2024-06-30"
 
 # 일별 주가 데이터를 가져옵니다
 df = stock.get_market_ohlcv_by_date(start_date, end_date, ticker)
@@ -46,7 +46,7 @@ print(df[['종가', 'ATR', 'ATR_Stop_Loss', 'Upper_Band', 'Lower_Band']].tail(10
 
 # 역사적 변동성 계산
 df['Daily_Return'] = df['종가'].pct_change()
-df['Volatility'] = df['Daily_Return'].rolling(window=20).std() * np.sqrt(252)  # 연간화된 변동성
+df['Volatility'] = df['Daily_Return'].rolling(window=60).std() * np.sqrt(252)  # 연간화된 변동성
 
 print(df[['종가', 'Volatility']].tail(10))
 
